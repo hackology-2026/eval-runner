@@ -106,7 +106,16 @@
 
 <script>
 const SCORES_URL = "scores.json";
+const TEAMS_URL = "teams.json";
 const REFRESH_MS = 60000;
+
+let TEAM_NAMES = {};
+async function loadTeamNames() {
+  try {
+    const resp = await fetch(TEAMS_URL + "?t=" + Date.now());
+    if (resp.ok) TEAM_NAMES = await resp.json();
+  } catch (_) { /* fall back to raw team_id */ }
+}
 
 function formatTime(iso) {
   if (!iso) return "—";
@@ -148,7 +157,7 @@ async function fetchAndRender() {
         const rank = i + 1;
         return `<tr>
           <td class="rank ${rankClass(rank)}">${rank}</td>
-          <td class="team-name">${e.team_id}</td>
+          <td class="team-name">${TEAM_NAMES[e.team_id] ? `${TEAM_NAMES[e.team_id]} (${e.team_id})` : e.team_id}</td>
           <td class="map-score">${e.best_map.toFixed(4)}</td>
           <td class="meta">${e.total_submissions}</td>
           <td class="meta">${formatTime(e.last_submission)}</td>
@@ -162,7 +171,7 @@ async function fetchAndRender() {
   }
 }
 
-fetchAndRender();
+loadTeamNames().then(fetchAndRender);
 setInterval(fetchAndRender, REFRESH_MS);
 </script>
 

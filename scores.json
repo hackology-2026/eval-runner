@@ -608,11 +608,18 @@
           "map_at_05": 0.5413495725974871,
           "predictions_path": "submissions/predictions.json",
           "status": "scored"
+        },
+        {
+          "timestamp": "2026-05-23T21:20:46.325854+00:00",
+          "sha": "376f7ae014ad9b07c92b979f8aeb71307a4a8781",
+          "map_at_05": 0.7303726472772342,
+          "predictions_path": "submissions/predictions.json",
+          "status": "scored"
         }
       ],
-      "best_map": 0.5413495725974871,
-      "total_scored": 1,
-      "total_submissions": 1
+      "best_map": 0.7303726472772342,
+      "total_scored": 2,
+      "total_submissions": 2
     }
   }
 }

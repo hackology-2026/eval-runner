@@ -4,5 +4,20 @@
     "per_hour": 5,
     "total": 30
   },
-  "teams": {}
+  "teams": {
+    "team-14": {
+      "submissions": [
+        {
+          "timestamp": "2026-05-23T13:40:24.208508+00:00",
+          "sha": "d9256beec5ae859c9bd3143bbf46822b55f5ea4a",
+          "map_at_05": 0.003552115286336679,
+          "predictions_path": "submissions/predictions.json",
+          "status": "scored"
+        }
+      ],
+      "best_map": 0.003552115286336679,
+      "total_scored": 1,
+      "total_submissions": 1
+    }
+  }
 }

@@ -18,6 +18,20 @@
       "best_map": 0.003552115286336679,
       "total_scored": 1,
       "total_submissions": 1
+    },
+    "team-05": {
+      "submissions": [
+        {
+          "timestamp": "2026-05-23T13:42:53.752422+00:00",
+          "sha": "91781139b80d64bf58feb3ca41bf54fe3c4199f2",
+          "map_at_05": 0.0,
+          "predictions_path": "submissions/predictions.json",
+          "status": "scored"
+        }
+      ],
+      "best_map": 0.0,
+      "total_scored": 1,
+      "total_submissions": 1
     }
   }
 }

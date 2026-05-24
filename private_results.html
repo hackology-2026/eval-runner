@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hackology II — Final Private Results</title>
+<style>
+  :root {
+    --bg: #0f1117; --surface: #1a1d27; --border: #2a2d3a;
+    --text: #e1e4ed; --muted: #8b8fa3; --accent: #6c8cff;
+    --gold: #ffd700; --silver: #c0c0c0; --bronze: #cd7f32;
+    --pos: #4ade80; --neg: #f87171; --err: #fbbf24;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    background: var(--bg); color: var(--text); padding: 2rem;
+    max-width: 1000px; margin: 0 auto; }
+  h1 { text-align: center; margin-bottom: 0.5rem; font-size: 1.8rem; }
+  h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.2rem; color: var(--muted); }
+  .subtitle { text-align: center; color: var(--muted); margin-bottom: 2rem; font-size: 0.85rem; }
+  table { width: 100%; border-collapse: collapse; background: var(--surface);
+    border-radius: 8px; overflow: hidden; }
+  th { background: var(--border); padding: 0.75rem 1rem; text-align: left;
+    font-weight: 600; font-size: 0.8rem; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--muted); }
+  td { padding: 0.75rem 1rem; border-top: 1px solid var(--border); }
+  tr:hover td { background: rgba(108, 140, 255, 0.05); }
+  .rank { font-weight: 700; width: 3rem; text-align: center; }
+  .rank-1 { color: var(--gold); }
+  .rank-2 { color: var(--silver); }
+  .rank-3 { color: var(--bronze); }
+  .map-score { font-weight: 700; color: var(--accent); font-size: 1.05rem; }
+  .team-name { font-weight: 600; }
+  .meta { color: var(--muted); font-size: 0.85rem; }
+  .delta-pos { color: var(--pos); font-weight: 600; }
+  .delta-neg { color: var(--neg); font-weight: 600; }
+  .status-err { color: var(--err); font-family: 'SF Mono', monospace; font-size: 0.85rem; }
+  .stats { margin-top: 2rem; text-align: center; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<h1>🏆 Hackology II — Final Private Results</h1>
+<p class="subtitle">Final results on private test set — generated 2026-05-24 12:52</p>
+
+<h2>Ranking (11 scored)</h2>
+<table>
+  <thead><tr><th class='rank'>Rank</th><th>Team</th><th>Private mAP@0.5</th><th>Public LB</th><th>Δ private−public</th></tr></thead>
+  <tbody>
+    <tr><td class='rank rank-1'>1</td><td class='team-name'>Qwontie (team-13)</td><td class='map-score'>0.8161</td><td class='meta'>0.8293</td><td class='delta-neg'>-0.0132</td></tr><tr><td class='rank rank-2'>2</td><td class='team-name'>llama lovers (team-08)</td><td class='map-score'>0.7452</td><td class='meta'>0.7420</td><td class='delta-pos'>+0.0032</td></tr><tr><td class='rank rank-3'>3</td><td class='team-name'>Goaty (team-05)</td><td class='map-score'>0.6662</td><td class='meta'>0.6752</td><td class='delta-neg'>-0.0090</td></tr><tr><td class='rank '>4</td><td class='team-name'>DerMap (team-03)</td><td class='map-score'>0.6299</td><td class='meta'>0.6426</td><td class='delta-neg'>-0.0127</td></tr><tr><td class='rank '>5</td><td class='team-name'>Warmińscy Czarodzieje (team-17)</td><td class='map-score'>0.6071</td><td class='meta'>0.6119</td><td class='delta-neg'>-0.0048</td></tr><tr><td class='rank '>6</td><td class='team-name'>AllNAll (team-01)</td><td class='map-score'>0.6026</td><td class='meta'>0.5840</td><td class='delta-pos'>+0.0186</td></tr><tr><td class='rank '>7</td><td class='team-name'>Polska AI B (team-12)</td><td class='map-score'>0.5899</td><td class='meta'>0.5724</td><td class='delta-pos'>+0.0175</td></tr><tr><td class='rank '>8</td><td class='team-name'>Cebularz (team-02)</td><td class='map-score'>0.5223</td><td class='meta'>0.5497</td><td class='delta-neg'>-0.0274</td></tr><tr><td class='rank '>9</td><td class='team-name'>Podbój Lublina (team-11)</td><td class='map-score'>0.4524</td><td class='meta'>0.4410</td><td class='delta-pos'>+0.0114</td></tr><tr><td class='rank '>10</td><td class='team-name'>ULON (team-16)</td><td class='map-score'>0.2825</td><td class='meta'>0.2968</td><td class='delta-neg'>-0.0143</td></tr><tr><td class='rank '>11</td><td class='team-name'>Hackojoty (team-06)</td><td class='map-score'>0.0000</td><td class='meta'>0.4935</td><td class='delta-neg'>-0.4935</td></tr>
+  </tbody>
+</table>
+
+<h2>Disqualified / Errors (6)</h2>
+<table>
+  <thead><tr><th>Team</th><th>Status</th><th>SHA</th></tr></thead>
+  <tbody>
+    <tr><td class='team-name'>Eastside (team-04)</td><td class='status-err'>predict_error</td><td class='meta'>fb143e40</td></tr><tr><td class='team-name'>LinkedIn&amp;Chill (team-07)</td><td class='status-err'>predict_timeout</td><td class='meta'>16468328</td></tr><tr><td class='team-name'>MoAI (team-10)</td><td class='status-err'>predict_error</td><td class='meta'>6315bb7b</td></tr><tr><td class='team-name'>ReLU (team-14)</td><td class='status-err'>predict_error</td><td class='meta'>f78ab1ce</td></tr><tr><td class='team-name'>SyntaxDebuggingDivas (team-15)</td><td class='status-err'>score_error</td><td class='meta'>ab9f90d3</td></tr><tr><td class='team-name'>LockedIn (team-09)</td><td class='status-err'>predict_error</td><td class='meta'>9931ca19</td></tr>
+  </tbody>
+</table>
+
+<p class="stats">Teams evaluated: <b>17</b> | scored: <b>11</b> | errors: <b>6</b> | mean mAP@0.5: <b>0.5377</b></p>
+
+</body>
+</html>

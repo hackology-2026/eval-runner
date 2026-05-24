@@ -706,11 +706,18 @@
           "map_at_05": 0.6856943447695263,
           "predictions_path": "submissions/predictions.json",
           "status": "scored"
+        },
+        {
+          "timestamp": "2026-05-24T02:34:09.902870+00:00",
+          "sha": "d0efb10b275dd5ee09dbd2d52a86df9185600e7f",
+          "map_at_05": 0.681955154130442,
+          "predictions_path": "submissions/predictions.json",
+          "status": "scored"
         }
       ],
       "best_map": 0.6890510137231949,
-      "total_scored": 12,
-      "total_submissions": 12
+      "total_scored": 13,
+      "total_submissions": 13
     },
     "team-16": {
       "submissions": [
